@@ -1,21 +1,21 @@
-
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { 
   Trophy, 
   Clock, 
   Target, 
-  XP, 
   BookOpen,
   CheckCircle2,
-  ArrowRight
+  ArrowRight,
+  Users,
+  Box
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
-// Custom icon for XP
-const XP = (props) => (
+// Custom icon for XP points
+const XpIcon = (props) => (
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
     width="24" 
@@ -110,9 +110,6 @@ const categoryIcons = {
   'Immersive': Box
 };
 
-// Adding missing imports
-import { Users, Box } from 'lucide-react';
-
 export function QuestBoard() {
   const [visible, setVisible] = useState(false);
   
@@ -201,7 +198,7 @@ export function QuestBoard() {
               
               <div className="flex justify-between text-sm text-muted-foreground">
                 <div className="flex items-center">
-                  <XP size={14} className="mr-1" />
+                  <XpIcon size={14} className="mr-1" />
                   <span>{quest.xpReward} XP</span>
                 </div>
                 <div className="flex items-center">

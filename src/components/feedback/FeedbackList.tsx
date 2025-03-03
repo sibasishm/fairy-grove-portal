@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { MessageSquare, Star, User, Calendar, ThumbsUp, Trash2 } from 'lucide-react';
+import { MessageSquare, Star, User, Calendar, ThumbsUp, Trash2, Briefcase, BookOpen, LineChart } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 
@@ -27,7 +27,7 @@ const feedbackData = [
     courseName: 'Advanced Project Management',
     date: 'May 28, 2023',
     rating: 5,
-    message: 'Excellent performance in the course. Your case study analysis was particularly insightful and demonstrated strong critical thinking. You've clearly mastered the core concepts and are ready for more advanced material.',
+    message: "Excellent performance in the course. Your case study analysis was particularly insightful and demonstrated strong critical thinking. You've clearly mastered the core concepts and are ready for more advanced material.",
     avatarUrl: '',
     isRead: true
   },
@@ -39,7 +39,7 @@ const feedbackData = [
     reviewPeriod: 'Q2 2023',
     date: 'July 10, 2023',
     rating: 4,
-    message: 'You've shown consistent growth this quarter. Your technical skills are strong, and your contributions to team projects have been valuable. Focus on developing your leadership capabilities to take on more responsibilities in the future.',
+    message: "You've shown consistent growth this quarter. Your technical skills are strong, and your contributions to team projects have been valuable. Focus on developing your leadership capabilities to take on more responsibilities in the future.",
     avatarUrl: '',
     isRead: false
   },
@@ -51,7 +51,7 @@ const feedbackData = [
     area: 'Technical Skills',
     date: 'July 15, 2023',
     rating: 3,
-    message: 'I've observed your progress with the new technologies we discussed. You're on the right track, but need more practice with the advanced features. Let's schedule a hands-on session next week to work through the challenging aspects.',
+    message: "I've observed your progress with the new technologies we discussed. You're on the right track, but need more practice with the advanced features. Let's schedule a hands-on session next week to work through the challenging aspects.",
     avatarUrl: '',
     isRead: false
   }

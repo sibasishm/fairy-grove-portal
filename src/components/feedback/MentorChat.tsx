@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Send, User, PaperclipIcon, Mic, Image, Video } from 'lucide-react';
+import { Send, User, PaperClip, Mic, Image, Video } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,10 +15,10 @@ const mentors = [
 // Sample messages data
 const initialMessages = [
   { id: 1, senderId: 1, text: 'Hi there! How can I help you with your career development today?', timestamp: '10:30 AM', isRead: true },
-  { id: 2, senderId: 'user', text: 'Hello! I\'m looking for guidance on improving my project management skills.', timestamp: '10:32 AM', isRead: true },
-  { id: 3, senderId: 1, text: 'That\'s a great area to focus on. Have you looked at the Advanced Project Management course in the learning catalog?', timestamp: '10:35 AM', isRead: true },
-  { id: 4, senderId: 'user', text: 'Yes, I\'m currently 65% through that course. I\'m particularly interested in practical applications.', timestamp: '10:37 AM', isRead: true },
-  { id: 5, senderId: 1, text: 'Excellent progress! I\'d recommend applying for the Digital Transformation project we have open. It would give you hands-on experience with the concepts you\'re learning.', timestamp: '10:40 AM', isRead: true },
+  { id: 2, senderId: 'user', text: "Hello! I'm looking for guidance on improving my project management skills.", timestamp: '10:32 AM', isRead: true },
+  { id: 3, senderId: 1, text: "That's a great area to focus on. Have you looked at the Advanced Project Management course in the learning catalog?", timestamp: '10:35 AM', isRead: true },
+  { id: 4, senderId: 'user', text: "Yes, I'm currently 65% through that course. I'm particularly interested in practical applications.", timestamp: '10:37 AM', isRead: true },
+  { id: 5, senderId: 1, text: "Excellent progress! I'd recommend applying for the Digital Transformation project we have open. It would give you hands-on experience with the concepts you're learning.", timestamp: '10:40 AM', isRead: true },
 ];
 
 export function MentorChat() {
@@ -59,7 +58,7 @@ export function MentorChat() {
       const mentorResponse = {
         id: messages.length + 2,
         senderId: selectedMentor.id,
-        text: 'Thanks for sharing that. I'll look into some specific opportunities that match your interests and skills. Let's schedule a call next week to discuss in more detail.',
+        text: "Thanks for sharing that. I'll look into some specific opportunities that match your interests and skills. Let's schedule a call next week to discuss in more detail.",
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
         isRead: false
       };
@@ -75,9 +74,6 @@ export function MentorChat() {
       .join('')
       .toUpperCase();
   };
-  
-  // Adding missing imports
-  import { PaperClip } from 'lucide-react';
   
   return (
     <div className="card-glass rounded-xl h-[600px] flex flex-col">
