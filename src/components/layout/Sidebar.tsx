@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import { useLocation } from 'react-router-dom';
 import { 
   LayoutDashboard, 
   GraduationCap, 
@@ -21,22 +22,23 @@ type NavItem = {
   active?: boolean;
 };
 
-const navItems: NavItem[] = [
-  { icon: LayoutDashboard, label: 'Dashboard', href: '/', active: true },
-  { icon: GraduationCap, label: 'Learning', href: '/learning' },
-  { icon: BrainCircuit, label: 'Competencies', href: '/competencies' },
-  { icon: Briefcase, label: 'Projects', href: '/projects' },
-  { icon: Trophy, label: 'Gamification', href: '/gamification' },
-  { icon: MessageSquare, label: 'Feedback', href: '/feedback' },
-  { icon: Settings, label: 'Settings', href: '/settings' },
-];
-
 interface SidebarProps {
   className?: string;
 }
 
 export function Sidebar({ className }: SidebarProps) {
   const [collapsed, setCollapsed] = useState(false);
+  const location = useLocation();
+  
+  const navItems: NavItem[] = [
+    { icon: LayoutDashboard, label: 'Dashboard', href: '/', active: location.pathname === '/' },
+    { icon: GraduationCap, label: 'Learning', href: '/learning', active: location.pathname === '/learning' },
+    { icon: BrainCircuit, label: 'Competencies', href: '/competencies', active: location.pathname === '/competencies' },
+    { icon: Briefcase, label: 'Projects', href: '/projects', active: location.pathname === '/projects' },
+    { icon: Trophy, label: 'Gamification', href: '/gamification', active: location.pathname === '/gamification' },
+    { icon: MessageSquare, label: 'Feedback', href: '/feedback', active: location.pathname === '/feedback' },
+    { icon: Settings, label: 'Settings', href: '/settings', active: location.pathname === '/settings' },
+  ];
 
   return (
     <aside
