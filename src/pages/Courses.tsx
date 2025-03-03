@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Sidebar } from '@/components/layout/Sidebar';
 import { Header } from '@/components/layout/Header';
 import { CoursesList } from '@/components/courses/CoursesList';
-import { Filter, BookOpen, SortAscending } from 'lucide-react';
+import { Filter, BookOpen, ArrowDownUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Courses = () => {
@@ -39,7 +39,7 @@ const Courses = () => {
                 <span>Filter</span>
               </Button>
               <Button variant="outline" size="sm" className="flex items-center gap-2">
-                <SortAscending size={16} />
+                <ArrowDownUp size={16} />
                 <span>Sort</span>
               </Button>
             </div>

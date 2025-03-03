@@ -15,7 +15,7 @@ const feedbackData = [
     projectName: 'Digital Transformation Initiative',
     date: 'June 5, 2023',
     rating: 4,
-    message: 'Great work on the data analysis part of the project. Your insights helped us identify key optimization opportunities. Continue developing your presentation skills for maximum impact.',
+    message: "Great work on the data analysis part of the project. Your insights helped us identify key optimization opportunities. Continue developing your presentation skills for maximum impact.",
     avatarUrl: '',
     isRead: true
   },
@@ -105,9 +105,6 @@ export function FeedbackList() {
       default: return 'Feedback';
     }
   };
-  
-  // Adding missing imports
-  import { Briefcase, BookOpen, LineChart } from 'lucide-react';
   
   const getInitials = (name) => {
     return name

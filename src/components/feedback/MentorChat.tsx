@@ -1,6 +1,7 @@
+
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Send, User, PaperClip, Mic, Image, Video } from 'lucide-react';
+import { Send, User, Paperclip, Mic, Image, Video } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -173,7 +174,7 @@ export function MentorChat() {
         
         <div className="flex justify-center mt-2 gap-4">
           <Button variant="ghost" size="sm" className="text-muted-foreground">
-            <PaperClip size={16} />
+            <Paperclip size={16} />
           </Button>
           <Button variant="ghost" size="sm" className="text-muted-foreground">
             <Image size={16} />
