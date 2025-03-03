@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Sidebar } from '@/components/layout/Sidebar';
 import { Header } from '@/components/layout/Header';
@@ -13,13 +12,13 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { cn } from '@/lib/utils';
+import { ThemeToggle } from '@/components/theme/ThemeToggle';
 
 const Settings = () => {
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('profile');
   
   useEffect(() => {
-    // Simulate loading for a smoother initial experience
     const timer = setTimeout(() => setLoading(false), 300);
     return () => clearTimeout(timer);
   }, []);
@@ -355,11 +354,7 @@ const Settings = () => {
                             Toggle between light and dark themes
                           </p>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <Sun size={16} className="text-muted-foreground" />
-                          <Switch id="dark-mode" />
-                          <Moon size={16} className="text-muted-foreground" />
-                        </div>
+                        <ThemeToggle />
                       </div>
                     </div>
                   </div>
