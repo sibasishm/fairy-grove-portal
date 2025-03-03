@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Sidebar } from '@/components/layout/Sidebar';
 import { Header } from '@/components/layout/Header';
-import { Filter, GraduationCap, ArrowDownUp, BookOpen, Vr } from 'lucide-react';
+import { Filter, GraduationCap, ArrowDownUp, BookOpen, Monitor3d } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -142,7 +142,7 @@ const Learning = () => {
                 <span>Courses</span>
               </TabsTrigger>
               <TabsTrigger value="immersive" className="flex items-center gap-2">
-                <Vr size={16} />
+                <Monitor3d size={16} />
                 <span>Immersive Learning</span>
               </TabsTrigger>
             </TabsList>
@@ -291,7 +291,7 @@ const Learning = () => {
                         <div className="w-full flex items-center text-muted-foreground mb-2">
                           <span>Format:</span>
                           <Badge variant="outline" className="ml-2 bg-transparent border-purple-500 text-purple-500">
-                            <Vr size={12} className="mr-1" />
+                            <Monitor3d size={12} className="mr-1" />
                             {course.format}
                           </Badge>
                         </div>
